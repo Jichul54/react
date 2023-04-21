@@ -1,5 +1,19 @@
+import { useState } from "react";
+
 const Header = () => {
-  return <h1>hello</h1>;
+  const [value, setValue] = useState("hello");
+  return (
+    <div>
+      <h1>hello</h1>
+      <button
+        onClick={() => {
+          setValue("Thank You");
+        }}
+      >
+        click me!
+      </button>
+    </div>
+  );
 };
 
 export default Header;
