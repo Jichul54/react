@@ -10,7 +10,7 @@ const Header = () => {
           setValue("Thank You");
         }}
       >
-        click me! Hi! Hello!
+        click me!
       </button>
     </div>
   );
