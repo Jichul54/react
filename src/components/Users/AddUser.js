@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "../UI/Card"
+import classes from './AddUser.module.css'
 
 const AddUser = (props) => {
   const addUserHandler = (event) => {
@@ -6,14 +8,15 @@ const AddUser = (props) => {
   };
 
   return (
-    // addUserHandler() 라고 적으면 이 파일을 컴파일할떄 바로 함수가 실행됨
-    <form onSubmit={addUserHandler}>
-      <label htmlFor="username">Username</label>
-      <input id="username" type="text" />
-      <label htmlFor="age">Age (Years)</label>
-      <input id="age" type="number" />
-      <button type="submit">Add User</button>
-    </form>
+    <Card className={classes.input}>
+      <form onSubmit={addUserHandler}>
+        <label htmlFor="username">Username</label>
+        <input id="username" type="text" />
+        <label htmlFor="age">Age (Years)</label>
+        <input id="age" type="number" />
+        <button type="submit">Add User</button>
+      </form>
+    </Card>
   );
 };
 
